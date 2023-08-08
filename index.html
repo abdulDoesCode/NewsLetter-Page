@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/icon-list.ico"
+    />
+
+    <title>Newsletter sign-up form with success message</title>
+
+    <!-- Google Fonts -->
+    <link rel="fonts" href="https://fonts.googleapis.com" />
+    <link rel="fonts" href="https://fonts.gstatic.com"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <section class="form-component" id="form">
+      <img
+        src="assets/images/illustration-sign-up-desktop.svg"
+        alt="Gradient background"
+      />
+      <div class="container">
+        <h1>Stay updated!</h1>
+
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email-field"
+            placeholder="email@company.com"
+            onkeyup="validateEmail()"
+          />
+          <span id="email-error"></span>
+        </div>
+        <button id="btn">Subscribe to monthly newsletter</button>
+      </div>
+    </section>
+
+    <!-- Success message start -->
+    <section class="form-success hidden" id="form-success">
+      <div class="form-success-container">
+        <img
+          src="assets/images/icon-success.svg"
+          alt="Success Icon"
+          class="form-success-icon"
+        />
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <span id="email-details"></span> Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+        <button id="dismiss-btn">Dismiss message</button>
+      </div>
+    </section>
+    <!-- Success message end -->
+    <script src="acceptEmail.js"></script>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://www.linkedin.com/in/abdelrahmannashaat/">Abedlrahman Nashaat</a>.
+    </div>
+    
+  </body>
+</html>
